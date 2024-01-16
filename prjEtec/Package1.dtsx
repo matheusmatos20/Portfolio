@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{C35110CF-E470-4BB8-A27C-CF5AECF8299A}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{4261D795-1C1E-4D23-890F-1464FB1946B8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -158,13 +158,13 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Contêiner do Loop Foreach"
+      DTS:refId="Package\BUSCA ARQUIVOS DE COTAÇÕES"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Contêiner do Loop Foreach"
       DTS:DTSID="{DF2BDF52-6E73-4488-AEF6-B2446D986CDF}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Contêiner do Loop Foreach">
+      DTS:ObjectName="BUSCA ARQUIVOS DE COTAÇÕES">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{C965A5C1-A785-46F3-BC31-C3C9A7E0F745}"
@@ -185,13 +185,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados"
+          DTS:refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarefa Fluxo de Dados"
           DTS:DTSID="{D89CA139-0A11-4B86-860B-6E7390DA0B8E}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Tarefa Fluxo de Dados"
+          DTS:ObjectName="LEITURA DOS ARQUIVOS COTACOES"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -199,7 +199,7 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB"
+                  refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
                   description="Destino OLE DB"
@@ -256,7 +256,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Connections[OleDbConnection]"
+                      refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[DESKTOP-P2CC4NA.dbEtec]"
                       connectionManagerRefId="Package.ConnectionManagers[DESKTOP-P2CC4NA.dbEtec]"
                       description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
@@ -264,57 +264,57 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                      refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
                       errorOrTruncationOperation="Inserir"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="Entrada de Destino OLE DB">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[CNPJ]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[CNPJ]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="CNPJ"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NR_CNPJ]"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[CNPJ]" />
+                          externalMetadataColumnId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NR_CNPJ]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[CNPJ]" />
                         <inputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[NOME_DO_REMEDIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[NOME_DO_REMEDIO]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="NOME_DO_REMEDIO"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NM_REMEDIO]"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_DO_REMEDIO]" />
+                          externalMetadataColumnId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NM_REMEDIO]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_DO_REMEDIO]" />
                         <inputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[VALOR_UNITARIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[VALOR_UNITARIO]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="VALOR_UNITARIO"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VL_UNITARIO]"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[VALOR_UNITARIO]" />
+                          externalMetadataColumnId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VL_UNITARIO]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[VALOR_UNITARIO]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID]"
                           dataType="i4"
                           name="ID" />
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NR_CNPJ]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NR_CNPJ]"
                           codePage="1252"
                           dataType="str"
                           length="30"
                           name="NR_CNPJ" />
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NM_REMEDIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NM_REMEDIO]"
                           codePage="1252"
                           dataType="str"
                           length="255"
                           name="NM_REMEDIO" />
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VL_UNITARIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VL_UNITARIO]"
                           codePage="1252"
                           dataType="str"
                           length="20"
@@ -324,22 +324,22 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                      refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Saída de Erro de Destino OLE DB"
-                      synchronousInputId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                      synchronousInputId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -348,7 +348,7 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples"
+                  refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
                   description="Origem de Arquivo Simples"
@@ -368,25 +368,25 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Connections[FlatFileConnection]"
+                      refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Connections[FlatFileConnection]"
                       connectionManagerID="Package.ConnectionManagers[ArquivoEntrada]"
                       connectionManagerRefId="Package.ConnectionManagers[ArquivoEntrada]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]"
+                      refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]"
                       name="Saída de Origem de Arquivo Simples">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[CNPJ]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[CNPJ]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversão"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CNPJ]"
+                          externalMetadataColumnId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CNPJ]"
                           length="50"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[CNPJ]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[CNPJ]"
                           name="CNPJ"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -401,14 +401,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_DO_REMEDIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_DO_REMEDIO]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversão"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_DO_REMEDIO]"
+                          externalMetadataColumnId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_DO_REMEDIO]"
                           length="50"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_DO_REMEDIO]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_DO_REMEDIO]"
                           name="NOME_DO_REMEDIO"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -423,14 +423,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[VALOR_UNITARIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[VALOR_UNITARIO]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversão"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[VALOR_UNITARIO]"
+                          externalMetadataColumnId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[VALOR_UNITARIO]"
                           length="50"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[VALOR_UNITARIO]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[VALOR_UNITARIO]"
                           name="VALOR_UNITARIO"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -448,19 +448,19 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CNPJ]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CNPJ]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="CNPJ" />
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_DO_REMEDIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_DO_REMEDIO]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="NOME_DO_REMEDIO" />
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[VALOR_UNITARIO]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[VALOR_UNITARIO]"
                           codePage="1252"
                           dataType="str"
                           length="50"
@@ -468,27 +468,27 @@
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                      refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples]"
                       isErrorOut="true"
                       name="Saída de Erro de Origem de Arquivo Simples">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
                           codePage="1252"
                           dataType="text"
                           description="Coluna de Saída de Erro de Origem de Arquivo Simples"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
                           name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                          refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                          lineageId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -499,22 +499,22 @@
               </components>
               <paths>
                 <path
-                  refId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
-                  endId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES.Paths[Saída de Origem de Arquivo Simples]"
+                  endId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
                   name="Saída de Origem de Arquivo Simples"
-                  startId="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
+                  startId="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos"
+          DTS:refId="Package\BUSCA ARQUIVOS DE COTAÇÕES\MOVE ARQUIVOS LIDOS"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="Tarefa Sistema de Arquivos"
           DTS:DTSID="{c88ead06-d6d6-4b33-8d2b-48db5aee84ca}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Tarefa Sistema de Arquivos"
+          DTS:ObjectName="MOVE ARQUIVOS LIDOS"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
@@ -529,13 +529,13 @@
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contêiner do Loop Foreach.PrecedenceConstraints[Restrição]"
+          DTS:refId="Package\BUSCA ARQUIVOS DE COTAÇÕES.PrecedenceConstraints[Restrição]"
           DTS:CreationName=""
           DTS:DTSID="{F676E90A-C6F5-4798-A005-CEB72ABFC866}"
-          DTS:From="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados"
+          DTS:From="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Restrição"
-          DTS:To="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos" />
+          DTS:To="Package\BUSCA ARQUIVOS DE COTAÇÕES\MOVE ARQUIVOS LIDOS" />
       </DTS:PrecedenceConstraints>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
@@ -875,12 +875,12 @@ WHERE ID_PRECO = 1</property>
       DTS:From="Package\LIMPAR STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição"
-      DTS:To="Package\Contêiner do Loop Foreach" />
+      DTS:To="Package\BUSCA ARQUIVOS DE COTAÇÕES" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 1]"
       DTS:CreationName=""
       DTS:DTSID="{2B92821A-8174-46BA-82C4-15935C8A849C}"
-      DTS:From="Package\Contêiner do Loop Foreach"
+      DTS:From="Package\BUSCA ARQUIVOS DE COTAÇÕES"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 1"
       DTS:To="Package\TRANSFORMAÇÃO" />
@@ -906,39 +906,39 @@ WHERE ID_PRECO = 1</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="185,42"
-          Id="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados"
+          Size="255,42"
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES"
           TopLeft="99.7777777777778,20.3333333333333" />
         <NodeLayout
-          Size="208,42"
-          Id="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos"
-          TopLeft="93.1111111111114,84.7777777777778" />
+          Size="195,42"
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES\MOVE ARQUIVOS LIDOS"
+          TopLeft="110.111111111111,107.777777777778" />
         <EdgeLayout
-          Id="Package\Contêiner do Loop Foreach.PrecedenceConstraints[Restrição]"
-          TopLeft="99.7777777777778,41.3333333333333">
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES.PrecedenceConstraints[Restrição]"
+          TopLeft="227.277777777778,62.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-6.6666666666664,64.4444444444445"
+              EndConnector="-19.6666666666664,45.4444444444445"
               Start="0,0"
-              End="-14.1666666666664,64.4444444444445">
+              End="-19.6666666666664,37.9444444444445">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-25.1666666666664,0" />
+                    End="0,18.7222222222223" />
                   <mssgle:CubicBezierSegment
-                    Point1="-25.1666666666664,0"
-                    Point2="-29.1666666666664,0"
-                    Point3="-29.1666666666664,4" />
+                    Point1="0,18.7222222222223"
+                    Point2="0,22.7222222222223"
+                    Point3="-4,22.7222222222223" />
                   <mssgle:LineSegment
-                    End="-29.1666666666664,60.4444444444445" />
+                    End="-15.6666666666664,22.7222222222223" />
                   <mssgle:CubicBezierSegment
-                    Point1="-29.1666666666664,60.4444444444445"
-                    Point2="-29.1666666666664,64.4444444444445"
-                    Point3="-25.1666666666664,64.4444444444445" />
+                    Point1="-15.6666666666664,22.7222222222223"
+                    Point2="-19.6666666666664,22.7222222222223"
+                    Point3="-19.6666666666664,26.7222222222223" />
                   <mssgle:LineSegment
-                    End="-14.1666666666664,64.4444444444445" />
+                    End="-19.6666666666664,37.9444444444445" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -950,9 +950,9 @@ WHERE ID_PRECO = 1</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="407,182"
-          Size="407,225"
-          Id="Package\Contêiner do Loop Foreach"
+          PanelSize="407,204"
+          Size="407,247"
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES"
           TopLeft="467.777777777778,150" />
         <NodeLayout
           Size="150,42"
@@ -961,20 +961,20 @@ WHERE ID_PRECO = 1</property>
         <NodeLayout
           Size="185,42"
           Id="Package\GERACAO DO PEDIDO"
-          TopLeft="598.888888888889,472.222222222222" />
+          TopLeft="598.888888888889,499.222222222222" />
         <NodeLayout
           Size="166,42"
           Id="Package\TRANSFORMAÇÃO"
-          TopLeft="555.555555555556,399.666666666667" />
+          TopLeft="599.555555555556,423.666666666667" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
           TopLeft="643.666666666667,92.8888888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27.6111111111111,57.1111111111112"
+              EndConnector="27.6111111111111,57.1111111111111"
               Start="0,0"
-              End="27.6111111111111,49.6111111111112">
+              End="27.6111111111111,49.6111111111111">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -991,7 +991,7 @@ WHERE ID_PRECO = 1</property>
                     Point2="27.6111111111111,28.5555555555556"
                     Point3="27.6111111111111,32.5555555555556" />
                   <mssgle:LineSegment
-                    End="27.6111111111111,49.6111111111112" />
+                    End="27.6111111111111,49.6111111111111" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1002,30 +1002,30 @@ WHERE ID_PRECO = 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 1]"
-          TopLeft="671.277777777778,375">
+          TopLeft="671.277777777778,397">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-32.7222222222222,24.6666666666667"
+              EndConnector="11.2777777777779,26.666666666667"
               Start="0,0"
-              End="-32.7222222222222,17.1666666666667">
+              End="11.2777777777779,19.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.33333333333337" />
+                    End="0,9.33333333333351" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.33333333333337"
-                    Point2="0,12.3333333333334"
-                    Point3="-4,12.3333333333334" />
+                    Point1="0,9.33333333333351"
+                    Point2="0,13.3333333333335"
+                    Point3="4,13.3333333333335" />
                   <mssgle:LineSegment
-                    End="-28.7222222222222,12.3333333333334" />
+                    End="7.27777777777794,13.3333333333335" />
                   <mssgle:CubicBezierSegment
-                    Point1="-28.7222222222222,12.3333333333334"
-                    Point2="-32.7222222222222,12.3333333333334"
-                    Point3="-32.7222222222222,16.3333333333334" />
+                    Point1="7.27777777777794,13.3333333333335"
+                    Point2="11.2777777777779,13.3333333333335"
+                    Point3="11.2777777777779,17.3333333333335" />
                   <mssgle:LineSegment
-                    End="-32.7222222222222,17.1666666666667" />
+                    End="11.2777777777779,19.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1036,30 +1036,30 @@ WHERE ID_PRECO = 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="638.555555555556,441.666666666667">
+          TopLeft="682.555555555556,465.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52.833333333333,30.555555555555"
+              EndConnector="8.83333333333303,33.5555555555549"
               Start="0,0"
-              End="52.833333333333,23.055555555555">
+              End="8.83333333333303,26.0555555555549">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.2777777777775" />
+                    End="0,12.7777777777775" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.2777777777775"
-                    Point2="0,15.2777777777775"
-                    Point3="4,15.2777777777775" />
+                    Point1="0,12.7777777777775"
+                    Point2="0,16.7777777777775"
+                    Point3="4,16.7777777777775" />
                   <mssgle:LineSegment
-                    End="48.833333333333,15.2777777777775" />
+                    End="4.83333333333303,16.7777777777775" />
                   <mssgle:CubicBezierSegment
-                    Point1="48.833333333333,15.2777777777775"
-                    Point2="52.833333333333,15.2777777777775"
-                    Point3="52.833333333333,19.2777777777775" />
+                    Point1="4.83333333333303,16.7777777777775"
+                    Point2="8.83333333333303,16.7777777777775"
+                    Point3="8.83333333333303,20.7777777777775" />
                   <mssgle:LineSegment
-                    End="52.833333333333,23.055555555555" />
+                    End="8.83333333333303,26.0555555555549" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1072,20 +1072,20 @@ WHERE ID_PRECO = 1</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados">
+    design-time-name="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="206,42"
-          Id="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Origem de Arquivo Simples"
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Origem de Arquivo Simples"
           TopLeft="284,40" />
         <NodeLayout
           Size="153,42"
-          Id="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB"
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB"
           TopLeft="277,139" />
         <EdgeLayout
-          Id="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+          Id="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES.Paths[Saída de Origem de Arquivo Simples]"
           TopLeft="387,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1122,7 +1122,7 @@ WHERE ID_PRECO = 1</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Contêiner do Loop Foreach\Tarefa Fluxo de Dados\Destino OLE DB">
+    design-time-name="Package\BUSCA ARQUIVOS DE COTAÇÕES\LEITURA DOS ARQUIVOS COTACOES\Destino OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
