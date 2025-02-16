@@ -1,0 +1,5 @@
+# Kafka client
+confluent-kafka==2.8.0  # Para interagir com o Kafka
+
+# MinIO (versão compatível com a sua versão)
+minio==7.1.14

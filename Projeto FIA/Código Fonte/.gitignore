@@ -1,0 +1,40 @@
+# Arquivos e pastas do Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+*.log
+
+# Arquivos do Airflow
+airflow.cfg
+unittests.cfg
+webserver_config.py
+logs/
+temp/
+scheduler/
+*.pid
+
+# Arquivos do Spark
+metastore_db/
+derby.log
+spark-warehouse/
+*.hadoop/
+*.sparkStaging/
+
+# Arquivos do MinIO
+minio_data/
+
+# Arquivos do PostgreSQL
+pgdata/
+
+# Arquivos do Docker
+docker-compose.override.yml
+*.iml
+*.swp
+*.swo
+
+# Arquivos do VS Code e do sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
